@@ -1,0 +1,35 @@
+body {
+  background-color: bisque;
+}
+
+#clear {
+  margin-top: -20px;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checked {
+  color: black;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.checked::before {
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
