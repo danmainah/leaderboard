@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To Do List Project
+# Leaderboard app
 
-> This project is about Creating a To Do list app that add and deleting tasks and store them in local storage.
+> This project is about Creating a Tleaderboard app that add name and user score  and store them in an API.
 
 ## Built With
 
@@ -11,9 +11,7 @@
 - Bootstrap framework for styling
 - CUstom css for additional styling
 
-## Live Demo
 
-[Live Demo Link](https://danmainah.github.io/to-do-list/)
 
 ## Getting Started
 
@@ -28,8 +26,8 @@
 - Click on the `Code` green button
 - By the right end of the read-only input containing the repository link click the clipboard icon to copy the link
 - In your local PC, open your terminal in the folder you would like to clone the repository into
-- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/danmainah/to-do-list.git`
-- After the clone, type in the command `cd to-do-list` to access the directory on the terminal
+- Clone the repository with the command: `git clone (copied link)`; like so: `https://github.com/danmainah/leaderboard`
+- After the clone, type in the command `cd leaderboard` to access the directory on the terminal
 - In the terminal type `npm start` and it will load the app in your default browser.
 
 ## 👤 **Daniel maina**
