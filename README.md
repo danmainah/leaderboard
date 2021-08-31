@@ -2,7 +2,7 @@
 
 # Leaderboard app
 
-> This project is about Creating a Tleaderboard app that add name and user score  and store them in an API.
+> This project is about Creating a Leaderboard app that add name and user score  and store them in an API.
 
 ## Built With
 
