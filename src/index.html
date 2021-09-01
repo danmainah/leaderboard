@@ -20,16 +20,16 @@
     <div class="container">
       <h1 class="m-5">Leaderboard</h1>
       <div class="row justify-content-around">
-        <div class="col-5">
+        <div class="col-5" >
           <h3 class="d-flex justify-content-between">
             Resent Scores
-            <button type="button" class="btn-secondary">Refresh</button>
+            <button type="button" id = "refresh-btn" class="btn-secondary">Refresh</button>
           </h3>
-          <ul class="list-group">
+          <ul class="list-group" id = "list">
+            <!-- <li class="list-group-item">Dan 100</li>
             <li class="list-group-item">Dan 100</li>
             <li class="list-group-item">Dan 100</li>
-            <li class="list-group-item">Dan 100</li>
-            <li class="list-group-item">Dan 100</li>
+            <li class="list-group-item">Dan 100</li> -->
           </ul>
         </div>
         <div class="col-5">
@@ -39,7 +39,7 @@
               <input
                 type="text"
                 class="form-control m-2"
-                id="floatingInput"
+                id="name"
                 placeholder="name"
               />
               <label for="floatingInput">Your name</label>
@@ -48,12 +48,12 @@
               <input
                 type="number"
                 class="form-control m-2"
-                id="floatingPassword"
+                id="score"
                 placeholder="score"
               />
-              <label for="floatingPassword">Your score</label>
+              <label for="floating">Your score</label>
             </div>
-            <button type="submit" class="btn btn-secondary mt-2 float-end">
+            <button type="submit" id ="submit-btn" class="btn btn-secondary mt-2 float-end">
               Submit
             </button>
           </form>
