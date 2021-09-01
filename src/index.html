@@ -20,17 +20,14 @@
     <div class="container">
       <h1 class="m-5">Leaderboard</h1>
       <div class="row justify-content-around">
-        <div class="col-5" >
+        <div class="col-5">
           <h3 class="d-flex justify-content-between">
             Resent Scores
-            <button type="button" id = "refresh-btn" class="btn-secondary">Refresh</button>
+            <button type="button" id="refresh-btn" class="btn-secondary">
+              Refresh
+            </button>
           </h3>
-          <ul class="list-group" id = "list">
-            <!-- <li class="list-group-item">Dan 100</li>
-            <li class="list-group-item">Dan 100</li>
-            <li class="list-group-item">Dan 100</li>
-            <li class="list-group-item">Dan 100</li> -->
-          </ul>
+          <ul class="list-group" id="list"></ul>
         </div>
         <div class="col-5">
           <h3>Add your score</h3>
@@ -53,7 +50,11 @@
               />
               <label for="floating">Your score</label>
             </div>
-            <button type="submit" id ="submit-btn" class="btn btn-secondary mt-2 float-end">
+            <button
+              type="submit"
+              id="submit-btn"
+              class="btn btn-secondary mt-2 float-end"
+            >
               Submit
             </button>
           </form>
