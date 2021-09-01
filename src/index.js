@@ -30,3 +30,25 @@ const displayList = async () => {
     });
   }
 }
+
+refreshButton.addEventListener('click', () => {
+    List.innerHTML = '';
+    displayList(List);
+  });
+ console.log(list)
+submitBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const scoreData = {
+      user: userName.value,
+      score: userScore.value,
+    };
+    const scoreAdded = await add(scoreData);
+    if (scoreAdded) {
+      List.innerHTML = '';
+      await displayList(List);
+      userName.value = '';
+      userScore.value = '';
+    }
+  });
+  
+  displayList(List);  
