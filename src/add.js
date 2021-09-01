@@ -6,7 +6,7 @@ export default async (scoreData) => {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(scoreData),
-      }
+      },
     );
     return true;
   }

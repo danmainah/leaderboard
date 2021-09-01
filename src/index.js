@@ -1,5 +1,5 @@
 import './style.css';
-import add from './add';
+import add from './add.js';
 
 const List = document.getElementById('list');
 const refreshButton = document.getElementById('refresh-btn');
@@ -9,9 +9,7 @@ const userScore = document.getElementById('score');
 
 const displayList = async () => {
   let scores = [];
-  const request = await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/231KSRjwxXecFZWRwz8v/scores/'
-  );
+  const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/231KSRjwxXecFZWRwz8v/scores/');
   const data = await request.json();
   scores = data.result;
 
