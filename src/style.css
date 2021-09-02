@@ -5,7 +5,8 @@ body {
 #list {
   list-style-type: none;
 }
+
 #list li:nth-child(even) {
   background-color: rgba(41, 39, 39, 0.863);
-  color:snow;
+  color: snow;
 }

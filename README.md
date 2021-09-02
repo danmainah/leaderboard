@@ -11,6 +11,9 @@
 - Bootstrap framework for styling
 - CUstom css for additional styling
 
+## Live Demo
+
+[Live Demo Link](https://danmainah.github.io/leaderboard/)
 
 
 ## Getting Started

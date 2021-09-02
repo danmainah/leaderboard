@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n  background-color: bisque;\\r\\n}\\r\\n\\r\\n#clear {\\r\\n  margin-top: -20px;\\r\\n}\\r\\n\\r\\n.block {\\r\\n  display: block;\\r\\n  width: 100%;\\r\\n  border: none;\\r\\n  padding: 14px 28px;\\r\\n  font-size: 16px;\\r\\n  cursor: pointer;\\r\\n  text-align: center;\\r\\n}\\r\\n\\r\\n.checked {\\r\\n  color: black;\\r\\n  text-decoration: line-through;\\r\\n}\\r\\n\\r\\n/* Add a \\\"checked\\\" mark when clicked on */\\r\\n.checked::before {\\r\\n  position: absolute;\\r\\n  border-color: #fff;\\r\\n  border-style: solid;\\r\\n  border-width: 0 2px 2px 0;\\r\\n  top: 10px;\\r\\n  left: 16px;\\r\\n  transform: rotate(45deg);\\r\\n  height: 15px;\\r\\n  width: 7px;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n  background-color: bisque;\\r\\n}\\r\\n\\r\\n#list {\\r\\n  list-style-type: none;\\r\\n}\\r\\n\\r\\n#list li:nth-child(even) {\\r\\n  background-color: rgba(41, 39, 39, 0.863);\\r\\n  color: snow;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://webpack/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -100,13 +100,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 
 /***/ }),
 
+/***/ "./src/add.js":
+/*!********************!*\
+  !*** ./src/add.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async (scoreData) => {\r\n  if (scoreData.user.trim() && scoreData.score.trim()) {\r\n    await fetch(\r\n      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/231KSRjwxXecFZWRwz8v/scores/',\r\n      {\r\n        method: 'post',\r\n        headers: { 'Content-Type': 'application/json' },\r\n        body: JSON.stringify(scoreData),\r\n      },\r\n    );\r\n    return true;\r\n  }\r\n  return false;\r\n});\r\n\n\n//# sourceURL=webpack://webpack/./src/add.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _add_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add.js */ \"./src/add.js\");\n\r\n\r\n\r\nconst List = document.getElementById('list');\r\nconst refreshButton = document.getElementById('refresh-btn');\r\nconst submitBtn = document.getElementById('submit-btn');\r\nconst userName = document.getElementById('name');\r\nconst userScore = document.getElementById('score');\r\n\r\nconst displayList = async () => {\r\n  let scores = [];\r\n  const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/231KSRjwxXecFZWRwz8v/scores/');\r\n  const data = await request.json();\r\n  scores = data.result;\r\n\r\n  if (scores.length) {\r\n    scores.forEach((score) => {\r\n      const li = document.createElement('li');\r\n      li.classList.add('list-group-item');\r\n      const text = `\r\n      <div class=\"d-flex\" id=\"${score.index}\">\r\n        <div class=\"fw-bold flex-grow-1\">\r\n          ${score.user} : ${score.score}\r\n        </div>\r\n      </div>`;\r\n\r\n      li.innerHTML = text;\r\n      List.appendChild(li);\r\n    });\r\n  }\r\n};\r\n\r\nrefreshButton.addEventListener('click', () => {\r\n  List.innerHTML = '';\r\n  displayList(List);\r\n});\r\nsubmitBtn.addEventListener('click', async (e) => {\r\n  e.preventDefault();\r\n  const scoreData = {\r\n    user: userName.value,\r\n    score: userScore.value,\r\n  };\r\n  const scoreAdded = await (0,_add_js__WEBPACK_IMPORTED_MODULE_1__.default)(scoreData);\r\n  if (scoreAdded) {\r\n    List.innerHTML = '';\r\n    await displayList(List);\r\n    userName.value = '';\r\n    userScore.value = '';\r\n  }\r\n});\r\n\r\ndisplayList(List);\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ })
 
